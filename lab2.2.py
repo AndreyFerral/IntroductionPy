@@ -1,0 +1,11 @@
+# Угадайте фигуру
+count = int(input("Введите количество сторон у фигуры: "))
+if count == 3: print("Треугольник")
+elif count == 4: print("Четырехугольник")
+elif count == 5: print("Пятиугольник")
+elif count == 6: print("Шестиугольник")
+elif count == 7: print("Семиугольник")
+elif count == 8: print("Восьмиугольник")
+elif count == 9: print("Неугольник")
+elif count == 10: print("Десятиугольник")
+else: print("Количество сторон должно быть от 3 до 10 включительно")
