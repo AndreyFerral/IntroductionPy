@@ -1,15 +1,15 @@
-import sys # Для передачи argv в QApplication
-import lab8design # Конвертированный файл дизайна
+import sys # для передачи argv в QApplication
+import ui_lab8 # файл дизайна
 from PyQt5 import QtWidgets
 from collections import Counter
 import string
 
-class ExampleApp(QtWidgets.QMainWindow, lab8design.Ui_MainWindow):
+class ExampleApp(QtWidgets.QMainWindow, ui_lab8.Ui_MainWindow):
     # Через данный метод происходит доступ к интерфейсу
     def __init__(self):
         super().__init__()
-        self.setupUi(self) # Это нужно для инициализации нашего дизайна 
-        # Назначаем функции по нажатию кнопок
+        self.setupUi(self) # инициализации дизайна
+        # Назначаем функцию по нажатию кнопки
         self.button.clicked.connect(self.button_clicked)
 
     # Функция обработки кнопки для проверки анаграмм
@@ -44,10 +44,10 @@ class ExampleApp(QtWidgets.QMainWindow, lab8design.Ui_MainWindow):
         else: return False
 
 def main():
-    app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
-    window = ExampleApp()  # Создаём объект класса ExampleApp
-    window.show()  # Показываем окно
-    app.exec_()  # и запускаем приложение
+    app = QtWidgets.QApplication(sys.argv)  # новый экземпляр QApplication
+    window = ExampleApp()  # создаём объект класса ExampleApp
+    window.show()  # показываем окно
+    app.exec_()  # запускаем приложение
 
 # Если файл запущен напрямую
 if __name__ == '__main__':

@@ -6,17 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>221</height>
+    <width>630</width>
+    <height>200</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <pointsize>12</pointsize>
-   </font>
-  </property>
   <property name="windowTitle">
-   <string>Лабораторная работа 8 - Снова анаграммы</string>
+   <string>Лабораторная работа 6</string>
   </property>
   <property name="accessibleName">
    <string/>
@@ -25,93 +20,195 @@
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Второе предложение</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="year_output">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>50</y>
-      <width>400</width>
-      <height>30</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="year_input">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>10</y>
-      <width>400</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="inputMethodHints">
-     <set>Qt::ImhDigitsOnly</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="year_button">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>90</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Проверить на анаграмму</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>180</width>
-      <height>30</height>
+      <width>221</width>
+      <height>151</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Первое предложение</string>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
+    <property name="title">
+     <string>Китайский гороскоп</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Введите год</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="year_button">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>70</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Рассчитать</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Результат</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="year_input">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="year_output">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>110</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>130</y>
-      <width>180</width>
-      <height>30</height>
+      <x>250</x>
+      <y>10</y>
+      <width>371</width>
+      <height>151</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Результат</string>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="year_output_2">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>130</y>
-      <width>400</width>
-      <height>30</height>
-     </rect>
+    <property name="title">
+     <string>Угадайте фигуру</string>
     </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>250</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="text">
+      <string>Введите кол-во сторон у фигуры</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="figure_button">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>70</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Рассчитать</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="text">
+      <string>Результат</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="figure_input">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="figure_output">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>110</y>
+       <width>250</width>
+       <height>30</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -119,8 +216,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
-     <height>27</height>
+     <width>630</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

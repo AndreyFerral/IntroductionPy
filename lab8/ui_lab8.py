@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'lab8.ui'
+# Form implementation generated from reading ui file 'c:\Users\Andrey\Documents\Python\IntroductionPy\lab8\lab8.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #

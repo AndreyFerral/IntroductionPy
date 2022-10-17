@@ -1,12 +1,12 @@
-import sys # Для передачи argv в QApplication
-import lab6design # Конвертированный файл дизайна
+import sys # для передачи argv в QApplication
+import ui_lab6 # файл дизайна
 from PyQt5 import QtWidgets
 
-class ExampleApp(QtWidgets.QMainWindow, lab6design.Ui_MainWindow):
+class ExampleApp(QtWidgets.QMainWindow, ui_lab6.Ui_MainWindow):
     # Через данный метод происходит доступ к интерфейсу
     def __init__(self):
         super().__init__()
-        self.setupUi(self) # Это нужно для инициализации нашего дизайна 
+        self.setupUi(self) # инициализации дизайна
         # Назначаем функции по нажатию кнопок
         self.year_button.clicked.connect(self.year_button_clicked)
         self.figure_button.clicked.connect(self.figure_button_clicked)
@@ -60,10 +60,10 @@ class ExampleApp(QtWidgets.QMainWindow, lab6design.Ui_MainWindow):
         return result
 
 def main():
-    app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
-    window = ExampleApp()  # Создаём объект класса ExampleApp
-    window.show()  # Показываем окно
-    app.exec_()  # и запускаем приложение
+    app = QtWidgets.QApplication(sys.argv)  # новый экземпляр QApplication
+    window = ExampleApp()  # создаём объект класса ExampleApp
+    window.show()  # показываем окно
+    app.exec_()  # запускаем приложение
 
 # Если файл запущен напрямую
 if __name__ == '__main__':
