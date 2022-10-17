@@ -9,7 +9,7 @@ class ExampleApp(QtWidgets.QMainWindow, ui_lab8.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self) # инициализации дизайна
-        # Назначаем функцию по нажатию кнопки
+        # Назначаем функцию по нажатию
         self.button.clicked.connect(self.button_clicked)
 
     # Функция обработки кнопки для проверки анаграмм
