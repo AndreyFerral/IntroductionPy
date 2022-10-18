@@ -16,9 +16,11 @@ class ExampleApp(QtWidgets.QMainWindow, ui_lab8.Ui_MainWindow):
     def button_clicked(self): 
         positive = "Данные предложения анаграммы"
         negative = "Данные предложения НЕ анаграммы"
+        what = "Данные предложения не существуют"
         first = self.first_input.text()
         second = self.second_input.text()
-        if self.is_anagram(first, second): self.output.setText(positive)
+        if first == "" or second == "": self.output.setText(what)
+        elif self.is_anagram(first, second): self.output.setText(positive)
         else: self.output.setText(negative)
 
     def is_anagram(self, first = None, second = None):
