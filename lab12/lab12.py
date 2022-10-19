@@ -8,15 +8,12 @@ class AlignDelegate(QtWidgets.QStyledItemDelegate):
         super(AlignDelegate, self).initStyleOption(option, index)
         option.displayAlignment = QtCore.Qt.AlignCenter
 
-
 class Window(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Решаем СЛУ")
         self.setFont(QtGui.QFont('Arial', 12))
-        max_x = 500
-        max_y = 300
-        self.resize(max_x, max_y) 
+        self.resize(500, 300) 
         count = 5
 
         # Созданию меню и пунктов
@@ -41,9 +38,6 @@ class Window(QtWidgets.QWidget):
 
         # Таблица для ввода матрицы
         self.matrix = QtWidgets.QTableWidget(count, count)
-        size_x = int(max_x - (max_x / count + 1))
-        size_y = int(max_y - (max_y / count + 1))
-        self.matrix.setMinimumSize(QtCore.QSize(size_x, size_y))
         self.matrix.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
         self.matrix.verticalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
 
@@ -54,8 +48,8 @@ class Window(QtWidgets.QWidget):
 
         # layout для таблицы матрицы и вектора
         self.h_layout = QtWidgets.QHBoxLayout()
-        self.h_layout.addWidget(self.matrix)
-        self.h_layout.addWidget(self.vector)
+        self.h_layout.addWidget(self.matrix, stretch=6)
+        self.h_layout.addWidget(self.vector, stretch=1)
 
         # Таблица для вывода результата
         self.result = QtWidgets.QTableWidget(1, count)
@@ -70,8 +64,8 @@ class Window(QtWidgets.QWidget):
         # Отображение созданных layout
         self.main_layout = QtWidgets.QVBoxLayout(self)
         self.main_layout.addLayout(self.menu_layout)
-        self.main_layout.addLayout(self.h_layout)
-        self.main_layout.addLayout(self.v_layout)
+        self.main_layout.addLayout(self.h_layout, stretch=6)
+        self.main_layout.addLayout(self.v_layout, stretch=1)
 
         # Первоначальная настройка таблиц
         self.clear_action()

@@ -1,5 +1,4 @@
 from PyQt5 import QtWidgets, QtCore, QtGui
-from PyQt5.QtCore import Qt
 import sys
 
 class Window(QtWidgets.QWidget):
@@ -54,7 +53,7 @@ class Window(QtWidgets.QWidget):
         painter = QtGui.QPainter(self.print.pixmap())
 
         # Настраиваем кисть для рисования
-        brush = Qt.BDiagPattern
+        brush = QtCore.Qt.BDiagPattern
         painter.setBrush(brush)
 
         # Настраиваем ручку для рисования
@@ -70,7 +69,6 @@ class Window(QtWidgets.QWidget):
 
         # Определяем расстояние между линиями
         plus_x = max_x / (count + 1)
-        print("count", count)
         print("plus_x", plus_x)
 
         # Рисуем линии
